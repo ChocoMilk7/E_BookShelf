@@ -1,0 +1,353 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #00c2c7;
+    position: relative;
+}
+
+.logo-container {
+    display: flex; /* Ensures logo and text are on the same line */
+    align-items: center; /* Vertically aligns image and text */
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-size: 24px; /* ขนาดตัวอักษรของโลโก้ */
+    font-weight: bold; /* ทำให้ตัวอักษรหนา */
+}
+.logo:hover {
+    color: #ffc0cb; /* Change the color on hover (example: gold) */
+}
+
+.logo img {
+    width: 40px; /* Adjust size to fit header */
+    height: auto;
+    transition: transform 0.3s ease;
+    vertical-align: middle; /* Align vertically with header text/icons */
+  }
+  .logo img:hover {
+    transform: scale(1.2);
+  }
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem; /* ขนาดตัวอักษรในหน้าจอใหญ่ */
+    padding: 8px 12px; /* เพิ่ม padding เพื่อให้คลิกง่ายขึ้น */
+}
+.nav-list a:hover {
+    color: #ffc0cb; /* Change the color on hover (example: gold) */
+    transform: scale(1.2);
+}
+
+.nav-list a i {
+    display: inline; /* แสดงไอคอนในหน้าจอใหญ่ */
+}
+
+.nav-list a span {
+    display: inline; /* แสดงตัวอักษรในหน้าจอใหญ่ */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-list {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #00c2c7;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .nav-list li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .nav-list a {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1rem;
+    }
+
+    .nav-list a i {
+        display: inline; /* แสดงไอคอนในหน้าจอใหญ่ */
+    }
+
+    .nav-list a span {
+        display: inline; /* แสดงข้อความในหน้าจอใหญ่ */
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ปรับให้มีระยะระหว่าง text-section และ image-section */
+    /*height: 100vh;*/
+    padding: 1.4rem 5%;
+    gap: 2rem;
+    /*flex-wrap: wrap; /* ทำให้ปรับเป็นหลายแถวในหน้าจอเล็ก */
+    max-width: 1200px;
+}
+
+.text-section {
+    max-width: 600px;
+    text-align: left;
+}
+
+.text-section h1 {
+    font-size: 2.7rem;
+    margin: 0;
+}
+
+.text-section h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.text-section .highlight {
+    color: #00c2c7; /* สีพาสเทลเข้ม */
+}
+.text-section .highlight1 {
+    color: #9370db; /* สีพาสเทลเข้ม */
+}
+.text-section .highlight2 {
+    color: #00bfff; /* สีพาสเทลเข้ม */
+}
+
+.text-section p {
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    /*margin-bottom: 10px;*/
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: #00c2c7;
+    font-size: 1.6rem;
+    margin-right: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    transform: scale(1.05);
+    color: #ff0000; /* สีเข้มขึ้นเมื่อ hover */
+}
+
+.buttons .btn {
+    display: inline-block;
+    padding: 8px 20px;
+    /*margin: 5px;*/
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.hire-btn {
+    background-color: #00c2c7;
+    color: #fff;
+}
+
+.hire-btn:hover {
+    background-color: #00797a;
+}
+
+.contact-btn {
+    background-color: transparent;
+    border: 2px solid #00c2c7;
+    color: #00c2c7;
+}
+
+.contact-btn:hover {
+    background-color: #00c2c7;
+    color: #fff;
+}
+
+.image-section {
+    display: flex; 
+    justify-content: center; /* ทำให้ภาพอยู่ตรงกลางแนวนอน */
+    align-items: center; 
+    flex: 1;
+}
+
+.image-section .image-wrapper {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #a0fdff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    /*margin: 0 auto; /* ทำให้ภาพอยู่ตรงกลาง */
+}
+
+.image-section .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-wrapper img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1023px) {
+    .container {
+        flex-direction: column; /* เรียงเนื้อหาเป็นแนวตั้งในหน้าจอขนาดกลาง */
+        text-align: center;
+    }
+
+    .text-section {
+        max-width: 90%; /* ลดขนาดเนื้อหาในหน้าจอขนาดกลาง */
+        order: 2; /* Text below image */
+        text-align: center;
+    }
+
+    .image-section {
+        order: -1; /* แสดงรูปภาพอยู่เหนือข้อความ */
+        width: 100%;
+        justify-content: center; /* ทำให้รูปภาพอยู่ตรงกลาง */
+    }
+
+    .image-section .image-wrapper {
+        width: 250px;
+        height: 250px; /* ลดขนาดภาพในหน้าจอขนาดกลาง */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #00c2c7;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    .nav-list li {
+        flex: 1;
+        text-align: center;
+    }
+
+    .nav-list a {
+        font-size: 1.5rem; /* ขนาดไอคอนในหน้าจอเล็ก */
+        flex-direction: column; /* แสดงไอคอนอยู่บนข้อความ */
+        gap: 0.25rem;
+    }
+
+    .nav-list a i {
+        display: inline; /* แสดงไอคอนในหน้าจอเล็ก */
+    }
+
+    .nav-list a span {
+        display: inline; /* แสดงข้อความในหน้าจอเล็ก */
+        font-size: 0.8rem; /* ขนาดข้อความใต้ไอคอน */
+    }
+    .text-section h1 {
+        font-size: 2rem;
+    }
+
+    .text-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .text-section p {
+        font-size: 0.9rem;
+    }
+
+    .buttons .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .image-section .image-wrapper {
+        width: 200px;
+        height: 200px; /* ลดขนาดภาพในหน้าจอเล็ก */
+    }
+
+    .social-icons a {
+        font-size: 1.2rem; /* ลดขนาดไอคอนโซเชียล */
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .text-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .buttons .btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    .image-section .image-wrapper {
+        width: 150px;
+        height: 150px; /* ลดขนาดภาพอีกในหน้าจอเล็กมาก */
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 3rem;
+    }
+
+    .text-section h1 {
+        font-size: 4rem;
+    }
+
+    .text-section h2 {
+        font-size: 2.5rem;
+    }
+}
